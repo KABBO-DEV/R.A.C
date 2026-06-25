@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Rashed Academic Care (R.A.C)"
+version = "1.0.0"
+id = "artifacts/rac-website"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21073
+
+[services.development]
+run = "pnpm --filter @workspace/rac-website run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/rac-website", "run", "build" ]
+publicDir = "artifacts/rac-website/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21073"
+BASE_PATH = "/"
