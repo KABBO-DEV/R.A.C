@@ -12,6 +12,7 @@ export function Navbar() {
     { href: "#about", label: "আমাদের সম্পর্কে" },
     { href: "#why-us", label: "কেন আমরা" },
     { href: "#facilities", label: "সুবিধাসমূহ" },
+    { href: "#schedule", label: "সময়সূচি" },
     { href: "#contact", label: "যোগাযোগ" },
   ];
 

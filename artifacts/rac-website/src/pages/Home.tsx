@@ -4,6 +4,7 @@ import { Hero } from "@/components/sections/Hero";
 import { About } from "@/components/sections/About";
 import { WhyUs } from "@/components/sections/WhyUs";
 import { Facilities } from "@/components/sections/Facilities";
+import { ClassSchedule } from "@/components/sections/ClassSchedule";
 import { Contact } from "@/components/sections/Contact";
 import { Footer } from "@/components/layout/Footer";
 
@@ -16,6 +17,7 @@ function Home() {
         <About />
         <WhyUs />
         <Facilities />
+        <ClassSchedule />
         <Contact />
       </main>
       <Footer />
