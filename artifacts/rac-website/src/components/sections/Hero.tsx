@@ -9,14 +9,15 @@ export function Hero() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
+        staggerChildren: 0.08,
+        delayChildren: 0.1,
       },
     },
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+    hidden: { opacity: 0, y: 16 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } },
   };
 
   const scrollToContact = () => {
@@ -74,18 +75,20 @@ export function Hero() {
             </p>
           </motion.div>
 
-          <motion.div variants={itemVariants} className="flex flex-col gap-4 text-left max-w-2xl w-full mx-auto mb-10 bg-black/10 p-6 md:p-8 rounded-2xl backdrop-blur-sm border border-white/10 shadow-xl">
+          <motion.div variants={itemVariants} className="flex flex-col gap-4 text-left max-w-2xl w-full mx-auto mb-10 bg-black/30 p-6 md:p-8 rounded-2xl border border-white/20 shadow-xl" style={{ overflow: 'visible' }}>
             <div className="flex items-start gap-3">
               <CheckCircle2 className="w-6 h-6 text-white shrink-0 mt-0.5" />
-              <p className="text-lg md:text-xl font-medium">৩য় শ্রেণিতে ভর্তি প্রস্তুতি</p>
+              <p className="text-lg md:text-xl font-semibold text-white leading-relaxed" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.4)' }}>৩য় শ্রেণিতে ভর্তি প্রস্তুতি</p>
             </div>
             <div className="flex items-start gap-3">
               <CheckCircle2 className="w-6 h-6 text-white shrink-0 mt-0.5" />
-              <p className="text-lg md:text-xl font-medium">৫ম শ্রেণি বৃত্তি প্রস্তুতি বিশেষ ব্যাচ</p>
+              <p className="text-lg md:text-xl font-semibold text-white leading-relaxed" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.4)' }}>৫ম শ্রেণি বৃত্তি প্রস্তুতি বিশেষ ব্যাচ</p>
             </div>
             <div className="flex items-start gap-3">
               <CheckCircle2 className="w-6 h-6 text-white shrink-0 mt-0.5" />
-              <p className="text-lg md:text-xl font-medium"><span className="whitespace-nowrap">১ম</span> থেকে <span className="whitespace-nowrap">৬ষ্ঠ</span> শ্রেণি পর্যন্ত বিদ্যালয় ভিত্তিক একাডেমিক প্রস্তুতি</p>
+              <p className="text-lg md:text-xl font-semibold text-white leading-relaxed" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.4)' }}>
+                ১ম থেকে ৬ষ্ঠ শ্রেণি পর্যন্ত বিদ্যালয় ভিত্তিক একাডেমিক প্রস্তুতি
+              </p>
             </div>
           </motion.div>
 
