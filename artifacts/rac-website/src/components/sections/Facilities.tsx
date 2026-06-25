@@ -28,10 +28,9 @@ export function Facilities() {
             <p className="text-gray-600 text-lg leading-relaxed mb-8">
               শিক্ষার্থীদের শারীরিক ও মানসিক বিকাশের জন্য একটি উপযুক্ত পরিবেশ প্রয়োজন। আমরা সেই পরিবেশ নিশ্চিত করতে বদ্ধপরিকর।
             </p>
-            <div className="hidden lg:block relative w-full aspect-square rounded-3xl overflow-hidden bg-gray-100 border-4 border-gray-50 shadow-inner">
-              <div className="absolute inset-0 bg-red-50 flex items-center justify-center p-8">
-                 <img src="/rac-logo.jpeg" alt="RAC" className="opacity-20 object-contain w-full h-full grayscale mix-blend-multiply" />
-              </div>
+            <div className="hidden lg:flex relative w-full aspect-square rounded-3xl overflow-hidden border-4 border-primary/20 shadow-xl flex-col items-center justify-center bg-gradient-to-br from-[#C0000C] to-[#8B0000]">
+              <img src="/rac-logo.jpeg" alt="RAC" className="w-3/4 h-3/4 object-contain rounded-2xl shadow-2xl" />
+              <p className="mt-4 text-white font-bold text-lg text-center px-4">রাশেদ একাডেমিক কেয়ার</p>
             </div>
           </motion.div>
 

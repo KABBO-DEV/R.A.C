@@ -85,7 +85,7 @@ export function Hero() {
             </div>
             <div className="flex items-start gap-3">
               <CheckCircle2 className="w-6 h-6 text-white shrink-0 mt-0.5" />
-              <p className="text-lg md:text-xl font-medium">১ম থেকে ৬ষ্ঠ শ্রেণি পর্যন্ত বিদ্যালয় ভিত্তিক একাডেমিক প্রস্তুতি</p>
+              <p className="text-lg md:text-xl font-medium"><span className="whitespace-nowrap">১ম</span> থেকে <span className="whitespace-nowrap">৬ষ্ঠ</span> শ্রেণি পর্যন্ত বিদ্যালয় ভিত্তিক একাডেমিক প্রস্তুতি</p>
             </div>
           </motion.div>
 

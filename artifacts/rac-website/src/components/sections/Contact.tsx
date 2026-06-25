@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Phone, MapPin, User, Clock } from "lucide-react";
+import { Phone, MapPin, User } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 export function Contact() {
@@ -53,33 +53,18 @@ export function Contact() {
               </CardContent>
             </Card>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <Card className="bg-white/10 backdrop-blur-md border-white/20 shadow-xl hover:bg-white/20 transition-colors">
-                <CardContent className="p-6 flex items-center gap-4">
-                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary shrink-0 shadow-sm">
-                    <User className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <h3 className="text-white/80 text-xs font-semibold uppercase mb-1">পরিচালক</h3>
-                    <p className="text-white font-bold">রাশেদুজ্জামান রাশেদ</p>
-                    <p className="text-white/70 text-sm">কারমাইকেল কলেজ</p>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-white/10 backdrop-blur-md border-white/20 shadow-xl hover:bg-white/20 transition-colors">
-                <CardContent className="p-6 flex items-center gap-4">
-                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary shrink-0 shadow-sm">
-                    <Clock className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <h3 className="text-white/80 text-xs font-semibold uppercase mb-1">অফিস সময়</h3>
-                    <p className="text-white font-bold">সকাল ৮টা - রাত ৮টা</p>
-                    <p className="text-white/70 text-sm">সপ্তাহে ৭ দিন</p>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
+            <Card className="bg-white/10 backdrop-blur-md border-white/20 shadow-xl hover:bg-white/20 transition-colors">
+              <CardContent className="p-6 flex items-center gap-4">
+                <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary shrink-0 shadow-sm">
+                  <User className="w-6 h-6" />
+                </div>
+                <div>
+                  <h3 className="text-white/80 text-xs font-semibold uppercase mb-1">পরিচালক</h3>
+                  <p className="text-white font-bold">রাশেদুজ্জামান রাশেদ</p>
+                  <p className="text-white/70 text-sm">কারমাইকেল কলেজ</p>
+                </div>
+              </CardContent>
+            </Card>
           </motion.div>
 
           <motion.div 
