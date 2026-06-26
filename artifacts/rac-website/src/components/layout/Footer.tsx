@@ -1,18 +1,23 @@
 import React from "react";
-import { Link } from "wouter";
 import { MapPin, Phone } from "lucide-react";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
   const links = [
-    { href: "/", label: "হোম" },
-    { href: "/about", label: "আমাদের সম্পর্কে" },
-    { href: "/why-us", label: "কেন আমরা" },
-    { href: "/facilities", label: "সুবিধাসমূহ" },
-    { href: "/schedule", label: "সময়সূচি" },
-    { href: "/contact", label: "যোগাযোগ" },
+    { href: "#home", label: "হোম" },
+    { href: "#about", label: "আমাদের সম্পর্কে" },
+    { href: "#why-us", label: "কেন আমরা" },
+    { href: "#facilities", label: "সুবিধাসমূহ" },
+    { href: "#schedule", label: "সময়সূচি" },
+    { href: "#contact", label: "যোগাযোগ" },
   ];
+
+  const scrollTo = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const element = document.querySelector(href);
+    if (element) element.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <footer className="bg-[#8B0000] text-white pt-16 pb-8 border-t border-white/10">
@@ -36,13 +41,14 @@ export function Footer() {
             <ul className="space-y-3">
               {links.map((link) => (
                 <li key={link.href}>
-                  <Link
+                  <a
                     href={link.href}
+                    onClick={(e) => scrollTo(e, link.href)}
                     className="text-white/80 hover:text-white transition-colors flex items-center gap-2"
                   >
                     <span className="w-1.5 h-1.5 bg-red-400 rounded-full shrink-0" />
                     {link.label}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
