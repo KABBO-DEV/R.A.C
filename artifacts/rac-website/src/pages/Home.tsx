@@ -7,6 +7,7 @@ import { WhyUs } from "@/components/sections/WhyUs";
 import { Facilities } from "@/components/sections/Facilities";
 import { ClassSchedule } from "@/components/sections/ClassSchedule";
 import { Contact } from "@/components/sections/Contact";
+import { Message } from "@/components/sections/Message";
 import { Footer } from "@/components/layout/Footer";
 
 function Home() {
@@ -20,6 +21,7 @@ function Home() {
         <WhyUs />
         <Facilities />
         <ClassSchedule />
+        <Message />
         <Contact />
       </main>
       <Footer />
