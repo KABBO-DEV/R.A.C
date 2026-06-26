@@ -26,7 +26,7 @@ export function Message() {
 
             <div className="mt-4 space-y-5 text-gray-700 text-lg md:text-xl leading-relaxed">
               <p>
-                আমি <span className="font-bold text-primary">কাব্বো</span>। রাশেদ একাডেমিক কেয়ার (R.A.C)-এর সাথে আমার পরিচয় অনেকদিনের।
+                আমি <span className="font-bold text-primary">কাব্য</span>। রাশেদ একাডেমিক কেয়ার (R.A.C)-এর সাথে আমার পরিচয় অনেকদিনের।
                 এই কোচিং সেন্টারটি শুধু একটি পড়ার জায়গা নয় — এটি একটি পরিবার।
               </p>
               <p>
@@ -45,7 +45,7 @@ export function Message() {
                 ক
               </div>
               <div>
-                <p className="font-bold text-gray-900 text-lg">কাব্বো</p>
+                <p className="font-bold text-gray-900 text-lg">কাব্য</p>
                 <p className="text-sm text-gray-500">শুভাকাঙ্ক্ষী, রাশেদ একাডেমিক কেয়ার</p>
               </div>
             </div>
