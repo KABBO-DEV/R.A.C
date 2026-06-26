@@ -46,7 +46,7 @@ export function Message() {
               </div>
               <div>
                 <p className="font-bold text-gray-900 text-lg">কাব্য</p>
-                <p className="text-sm text-gray-500">শুভাকাঙ্ক্ষী, রাশেদ একাডেমিক কেয়ার</p>
+                <p className="text-sm text-gray-500">ওয়েবসাইট ডিজাইনার ও ডেভেলপার</p>
               </div>
             </div>
           </div>
