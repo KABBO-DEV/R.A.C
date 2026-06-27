@@ -40,9 +40,15 @@ export function Message() {
             </div>
 
             {/* Author */}
-            <div className="mt-8 flex items-center gap-4 border-t border-gray-100 pt-6">
-              <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white text-xl font-bold shadow">
-                ক
+            <div className="mt-8 flex items-center gap-5 border-t border-gray-100 pt-6">
+              {/* Custom DEV logo */}
+              <div className="flex flex-col items-center gap-1 shrink-0">
+                <div className="bg-gray-900 rounded-xl px-3 py-2 shadow-lg flex items-center gap-0.5 select-none">
+                  <span className="text-[#e06c75] font-black text-lg font-mono leading-none">&lt;</span>
+                  <span className="text-[#61afef] font-black text-lg font-mono leading-none mx-0.5">/</span>
+                  <span className="text-[#e06c75] font-black text-lg font-mono leading-none">&gt;</span>
+                </div>
+                <span className="text-[10px] font-bold tracking-widest text-gray-400 uppercase font-mono">DEV</span>
               </div>
               <div>
                 <p className="font-bold text-gray-900 text-lg">কাব্য</p>
