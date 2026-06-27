@@ -1,5 +1,5 @@
 import React from "react";
-import { MapPin, Phone } from "lucide-react";
+import { MapPin, Phone, ShieldCheck } from "lucide-react";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -70,6 +70,39 @@ export function Footer() {
             </ul>
           </div>
 
+        </div>
+
+        {/* HexShield Badge */}
+        <div className="flex justify-center mb-8">
+          <div className="inline-flex items-center gap-3 bg-black/30 border border-cyan-400/40 rounded-2xl px-6 py-3 shadow-lg shadow-cyan-900/20 backdrop-blur-sm group hover:border-cyan-400/70 transition-all duration-300">
+            {/* Hex icon */}
+            <div className="relative flex items-center justify-center">
+              <svg width="32" height="36" viewBox="0 0 32 36" fill="none" className="drop-shadow-[0_0_6px_rgba(34,211,238,0.8)]">
+                <path
+                  d="M16 1L30 9V27L16 35L2 27V9L16 1Z"
+                  fill="rgba(34,211,238,0.12)"
+                  stroke="rgba(34,211,238,0.9)"
+                  strokeWidth="1.5"
+                />
+                <path
+                  d="M16 8L24 13V23L16 28L8 23V13L16 8Z"
+                  fill="rgba(34,211,238,0.08)"
+                  stroke="rgba(34,211,238,0.5)"
+                  strokeWidth="1"
+                />
+              </svg>
+              <ShieldCheck className="absolute w-3.5 h-3.5 text-cyan-300" />
+            </div>
+            {/* Text */}
+            <div className="flex flex-col leading-tight">
+              <span className="text-[10px] font-semibold tracking-[0.2em] uppercase text-cyan-400/80 font-mono">
+                Website Protected by
+              </span>
+              <span className="text-lg font-black tracking-widest text-cyan-300 font-mono drop-shadow-[0_0_8px_rgba(34,211,238,0.6)]">
+                HEX<span className="text-white">SHIELD</span>
+              </span>
+            </div>
+          </div>
         </div>
 
         <div className="border-t border-white/20 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
