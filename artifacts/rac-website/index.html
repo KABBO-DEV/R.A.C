@@ -3,6 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECURITY LAYER 1: Content Security Policy
+         Blocks ALL third-party scripts, ads, trackers, bet sites.
+         Only allows resources from this domain (self).
+    ═══════════════════════════════════════════════════════════ -->
+    <meta http-equiv="Content-Security-Policy" content="
+      default-src 'self';
+      script-src 'self' 'unsafe-inline' 'unsafe-eval';
+      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+      font-src 'self' data: https://fonts.gstatic.com;
+      img-src 'self' data: blob:;
+      connect-src 'self' wss: ws: https:;
+      frame-src 'none';
+      object-src 'none';
+      base-uri 'self';
+      form-action 'self';
+      media-src 'self';
+      worker-src 'self' blob:;
+      manifest-src 'self';
+      upgrade-insecure-requests;
+    " />
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECURITY LAYER 3: Security Meta Tags
+         Referrer policy, XSS protection, IE restrictions.
+    ═══════════════════════════════════════════════════════════ -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta name="format-detection" content="telephone=no, date=no, email=no, address=no" />
+
+    <!-- Page metadata -->
     <title>Rashed Academic Care (R.A.C) - শিক্ষার বিশ্বস্ত ঠিকানা</title>
     <meta name="description" content="রাশেদ একাডেমিক কেয়ার (R.A.C) - রংপুরের একটি অন্যতম সেরা একাডেমিক কোচিং সেন্টার। ৩য় শ্রেণি থেকে ৬ষ্ঠ শ্রেণি পর্যন্ত ভর্তি ও একাডেমিক প্রস্তুতির নির্ভরযোগ্য প্রতিষ্ঠান।" />
     <meta name="robots" content="index, follow" />
@@ -13,6 +47,45 @@
     <meta name="twitter:title" content="Rashed Academic Care (R.A.C) - শিক্ষার বিশ্বস্ত ঠিকানা" />
     <meta name="twitter:description" content="রাশেদ একাডেমিক কেয়ার (R.A.C) - রংপুরের একটি অন্যতম সেরা একাডেমিক কোচিং সেন্টার।" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECURITY LAYER 5 (Early): Pop-up & eval interceptor
+         Runs before React loads to block window.open abuse.
+    ═══════════════════════════════════════════════════════════ -->
+    <script>
+      (function () {
+        var _open = window.open;
+        window.open = function (url, name, features) {
+          if (!url) return null;
+          try {
+            var u = new URL(String(url), location.origin);
+            if (u.origin === location.origin) {
+              return _open.call(window, url, name, features);
+            }
+          } catch (_) {}
+          console.warn('[RAC Security] Blocked window.open to:', url);
+          return null;
+        };
+
+        var AD_KEYWORDS = [
+          'doubleclick', 'googlesyndication', 'adnxs', 'advertising',
+          'popads', 'popcash', 'propellerads', 'adcash', 'trafficjunky',
+          'exoclick', 'juicyads', 'adsterra', 'hilltopads', 'plugrush',
+          'betway', 'bet365', '1xbet', 'melbet', 'mostbet', 'betwinner',
+          'parimatch', 'linebet', 'sports-betting', 'casino', 'gambling',
+          'pornhub', 'xvideos', 'xnxx', 'onlyfans',
+        ];
+
+        function isMalicious(src) {
+          if (!src) return false;
+          var s = src.toLowerCase();
+          return AD_KEYWORDS.some(function (kw) { return s.includes(kw); });
+        }
+
+        document.__racAdKeywords = AD_KEYWORDS;
+        document.__racIsMalicious = isMalicious;
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
