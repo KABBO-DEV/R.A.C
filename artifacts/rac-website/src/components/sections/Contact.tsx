@@ -75,7 +75,7 @@ export function Contact() {
           >
             <iframe
               title="Google Maps location of Rashed Academic Care"
-              src="https://maps.google.com/maps?q=Mulatol+Amtola+Rangpur+Bangladesh&output=embed"
+              src="https://maps.google.com/maps?q=Mulatol+Amtola+Rangpur+Bangladesh&output=embed&hl=bn"
               width="100%"
               height="100%"
               style={{ border: 0 }}
