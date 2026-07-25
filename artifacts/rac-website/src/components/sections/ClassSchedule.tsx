@@ -152,7 +152,7 @@ export function ClassSchedule() {
           className="mt-12 max-w-5xl mx-auto bg-primary rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl"
         >
           <div className="text-center md:text-left">
-            <p className="text-white text-xl md:text-2xl font-bold">
+            <p className="text-white text-base md:text-2xl font-bold leading-snug">
               নিয়মিত মূল্যায়নে শিক্ষার্থীর সঠিক অগ্রগতি নিশ্চিত করা হয়
             </p>
             <p className="text-white/75 mt-1 text-sm md:text-base">

@@ -53,7 +53,7 @@ export function Hero() {
 
           <motion.h1 
             variants={itemVariants}
-            className="text-4xl md:text-5xl lg:text-7xl font-bold mb-4 drop-shadow-md"
+            className="text-3xl md:text-5xl lg:text-7xl font-bold mb-4 drop-shadow-md"
           >
             রাশেদ একাডেমিক কেয়ার
             <span className="block text-2xl md:text-3xl font-serif mt-2 font-medium opacity-90">(R.A.C)</span>
@@ -68,9 +68,9 @@ export function Hero() {
 
           <motion.div 
             variants={itemVariants}
-            className="inline-block bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 mb-10"
+            className="inline-block bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl px-6 py-3 mb-10 text-center"
           >
-            <p className="text-lg md:text-2xl font-bold tracking-wide">
+            <p className="text-base md:text-2xl font-bold tracking-wide">
               "আজকের সঠিক শিক্ষা, আগামী দিনের সফলতা"
             </p>
           </motion.div>

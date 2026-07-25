@@ -14,7 +14,7 @@ export function Message() {
           className="max-w-3xl mx-auto"
         >
           <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-3">ওয়েবসাইট ডিজাইনার ও ডেভেলপারের কথা</h2>
+            <h2 className="text-xl md:text-3xl lg:text-4xl font-bold text-primary mb-3 leading-snug">ওয়েবসাইট ডিজাইনার ও ডেভেলপারের কথা</h2>
             <div className="w-16 h-1 bg-primary mx-auto rounded-full" />
           </div>
 
