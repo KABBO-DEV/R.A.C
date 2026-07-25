@@ -59,7 +59,7 @@ export function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-white/80">
                 <MapPin className="w-5 h-5 shrink-0 mt-1 text-red-300" />
-                <span>মুলাটোল, আমতলা, হেকর গলি সংলগ্ন, রংপুর, বাংলাদেশ</span>
+                <span>মুলাটোল, আমতলা, হেকর গলি মোড়, ব্রিজ সংলগ্ন, রংপুর, বাংলাদেশ</span>
               </li>
               <li className="flex items-center gap-3 text-white/80">
                 <Phone className="w-5 h-5 shrink-0 text-red-300" />
