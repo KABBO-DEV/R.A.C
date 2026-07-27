@@ -58,7 +58,7 @@ export function Hero() {
           >
             <div className="bg-white rounded-full p-2 border-4 border-gray-100">
               <img
-                src={"${import.meta.env.BASE_URL}rac-logo.jpeg"}
+                src={`${import.meta.env.BASE_URL}rac-logo.jpeg`}
                 alt="RAC Logo"
                 className="w-32 h-32 md:w-40 md:h-40 object-contain rounded-full"
               />
