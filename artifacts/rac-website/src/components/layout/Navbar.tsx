@@ -26,11 +26,23 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full bg-white border-b-4 border-primary shadow-sm">
       <div className="container mx-auto px-4 md:px-6 h-20 flex items-center justify-between">
-        <a href="#home" onClick={(e) => scrollTo(e, "#home")} className="flex items-center gap-3">
-          <img src="/rac-logo.jpeg" alt="RAC Logo" className="h-12 w-12 object-contain rounded-full border border-gray-100 shadow-sm" />
+        <a
+          href="#home"
+          onClick={(e) => scrollTo(e, "#home")}
+          className="flex items-center gap-3"
+        >
+          <img
+            src={`${import.meta.env.BASE_URL}rac-logo.jpeg`}
+            alt="RAC logo"
+            className="h-12 w-12 object-contain rounded-full border border-gray-100 shadow-sm"
+          />
           <div className="flex flex-col">
-            <span className="font-bold text-lg md:text-xl text-primary leading-tight font-serif">R.A.C</span>
-            <span className="text-xs md:text-sm text-gray-600 font-medium">রাশেদ একাডেমিক কেয়ার</span>
+            <span className="font-bold text-lg md:text-xl text-primary leading-tight font-serif">
+              R.A.C
+            </span>
+            <span className="text-xs md:text-sm text-gray-600 font-medium">
+              রাশেদ একাডেমিক কেয়ার
+            </span>
           </div>
         </a>
 

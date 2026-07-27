@@ -1,6 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { CheckCircle2, ShieldCheck, Armchair, BookMarked, BrainCircuit, UsersRound } from "lucide-react";
+import {
+  CheckCircle2,
+  ShieldCheck,
+  Armchair,
+  BookMarked,
+  BrainCircuit,
+  UsersRound,
+} from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 export function Facilities() {
@@ -8,8 +15,14 @@ export function Facilities() {
     { title: "মানসম্পন্ন পাঠদান", icon: <BookMarked className="w-6 h-6" /> },
     { title: "আরামদায়ক শ্রেণিকক্ষ", icon: <Armchair className="w-6 h-6" /> },
     { title: "একাডেমিক গাইডেন্স", icon: <BrainCircuit className="w-6 h-6" /> },
-    { title: "পরীক্ষা প্রস্তুতি সহায়তা", icon: <CheckCircle2 className="w-6 h-6" /> },
-    { title: "বন্ধুত্বপূর্ণ শিক্ষা পরিবেশ", icon: <UsersRound className="w-6 h-6" /> },
+    {
+      title: "পরীক্ষা প্রস্তুতি সহায়তা",
+      icon: <CheckCircle2 className="w-6 h-6" />,
+    },
+    {
+      title: "বন্ধুত্বপূর্ণ শিক্ষা পরিবেশ",
+      icon: <UsersRound className="w-6 h-6" />,
+    },
     { title: "নিরাপদ ও সুরক্ষিত", icon: <ShieldCheck className="w-6 h-6" /> },
   ];
 
@@ -17,20 +30,28 @@ export function Facilities() {
     <section id="facilities" className="py-20 md:py-32 bg-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             className="lg:w-1/3 text-center lg:text-left"
           >
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">আমাদের সুবিধাসমূহ</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+              আমাদের সুবিধাসমূহ
+            </h2>
             <div className="h-1.5 w-24 bg-primary mx-auto lg:mx-0 rounded-full mb-6"></div>
             <p className="text-gray-600 text-lg leading-relaxed mb-8">
-              শিক্ষার্থীদের শারীরিক ও মানসিক বিকাশের জন্য একটি উপযুক্ত পরিবেশ প্রয়োজন। আমরা সেই পরিবেশ নিশ্চিত করতে বদ্ধপরিকর।
+              শিক্ষার্থীদের শারীরিক ও মানসিক বিকাশের জন্য একটি উপযুক্ত পরিবেশ
+              প্রয়োজন। আমরা সেই পরিবেশ নিশ্চিত করতে বদ্ধপরিকর।
             </p>
             <div className="hidden lg:flex relative w-full aspect-square rounded-3xl overflow-hidden border-4 border-primary/20 shadow-xl flex-col items-center justify-center bg-gradient-to-br from-[#C0000C] to-[#8B0000]">
-              <img src="/rac-logo.jpeg" alt="RAC" className="w-3/4 h-3/4 object-contain rounded-2xl shadow-2xl" />
-              <p className="mt-4 text-white font-bold text-lg text-center px-4">রাশেদ একাডেমিক কেয়ার</p>
+              <img
+                src={`${import.meta.env.BASE_URL}rac-logo.jpeg`}
+                className="w-3/4 h-3/4 object-contain rounded-2xl shadow-2xl"
+              />
+              <p className="mt-4 text-white font-bold text-lg text-center px-4">
+                রাশেদ একাডেমিক কেয়ার
+              </p>
             </div>
           </motion.div>
 
