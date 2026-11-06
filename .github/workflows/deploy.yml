@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -38,7 +39,7 @@ jobs:
       - name: Build website
         env:
           PORT: 3000
-          BASE_PATH: /R.A.C-WEBSITE/
+          BASE_PATH: /R.A.C/
         run: pnpm --filter @workspace/rac-website run build
 
       - name: Setup Pages
@@ -51,7 +52,6 @@ jobs:
 
   deploy:
     needs: build
-
     runs-on: ubuntu-latest
 
     environment:
